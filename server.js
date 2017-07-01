@@ -10,9 +10,9 @@ var PORT = process.env.PORT || 3000;
 app.use(express.static("./"));
 
 //get main route
-app.get("/", function(req, res) {
+app.use("/", function(req, res) {
   console.log("main page");
-  res.sendFile(__dirname + "/public/index.html");
+  res.sendFile("index.html");
 });
 
 // Listener
